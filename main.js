@@ -10,5 +10,5 @@ let nav =document.getElementById('nav');
  close.onclick =function(){ 
     menu.style.visibility ="visible" 
     close.style.visibility ="visible"; 
-    nav.style.right ="-210px"
+    nav.style.right ="-250px"
  }

@@ -29,19 +29,41 @@
     background-color: transparent;
 } 
 nav{ 
-    padding: 4% 8%; 
+    padding: 3% 10%; 
     display: flex; 
-    justify-content: space-between;
+    justify-content: space-between; 
+    align-items: center;
 } 
 .navlinks>ul>li{ 
     display: inline-block; 
-    padding: 1rem;
+    padding-left: 2rem; 
+    margin-left: 2rem;
 }  
 span{ 
    
     visibility: hidden; 
   
+}  
+.description{   
+    margin-top: 4rem;
+    width: 100%;
+     display: flex; 
+     justify-content: flex-end; 
+     
 } 
+.create
+{width: 50%; 
+
+} 
+.create>h1{font-size: 50px; margin-bottom: 10px;} 
+.create>p{font-size: 22px; font-weight: bold; margin-bottom: 10px;}  
+.btn{
+     padding: 1rem 4rem; 
+     background-color: black; 
+     width: fit-content; 
+     color: #fff; 
+     border-radius: 10px;
+}
 
 .items{ 
     width: 100%; 
@@ -66,25 +88,29 @@ span{
 } 
 @media screen and (max-width:500px) {
     .navlinks{  
-        width: 200px; 
-        background-color: red; 
+        width: 230px; 
+        background-color: black;  
+       
         position: absolute; 
-        right: -210px; 
+        right:-250px; 
         top: 0;  
-        padding: 1rem;
-         transition: 1s;
+         transition: 1s; 
+         /* height: 200px ; */ 
+         color: #fff;
     }  
     nav{ 
         position: relative;
     }
     .navlinks>ul>li{ 
         display: block; 
+        padding: 2rem; 
+        border-bottom: 1px solid grey;
         
-
     } 
       span{ 
         visibility: visible;
-      }
+      } 
+      
 
     .items{ 
          display: grid; 
@@ -92,6 +118,104 @@ span{
          grid-template-rows: 1fr 1fr 1fr; 
          gap: 10px; 
          padding: 2rem;
+    }  
+    .description{ 
+        display: block; 
+        width: 100%; 
+        margin-top: 15rem;
     } 
+    .create{ 
+        width: 100%; 
+        text-align: center; 
+        display: flex; 
+        flex-direction: column; 
+         
+        align-items: center;
+    } 
+    .create>h1{ 
+        font-size: 32px;
+    }
     
+} 
+.categorie{ 
+    width: 100%;
+    padding: 5rem; 
+    
+}  
+.categorie>h1{ 
+    color :rgb(63,62,61);
+     margin-bottom: 8px;
+
+} 
+.categorie>p{ 
+    color: rgb(107,107,107);
+}
+.featured_categories{  
+    padding: 3rem;
+   width: 100%;  
+   height: 40rem;
+   display: grid; 
+   grid-template-columns: 1fr 350px 350px; 
+   grid-template-rows: 1fr 1fr; 
+   gap: 20px;
+} 
+.categories1{background-color: red; 
+    grid-row: span 2; 
+    background-image: url(images/candales.jpg);  
+    background-size: cover; 
+    background-position: center; 
+    position: relative;
+} 
+.categories4{background-color: red;  
+    grid-column: span 2;  
+    background-image: url(images/book\ room.jpg); 
+    background-size: cover; 
+    background-position: center; 
+    position: relative;
+
+}
+.categories2{ 
+    background-image: url(images/sofa.jpg); 
+    background-size: cover; 
+    background-position: bottom; 
+    position: relative;
+
+} 
+.categories3{ 
+    background-image: url(images/modern\ living\ room.webp); 
+    background-size: cover; 
+    background-position: center; 
+    position: relative;
+} 
+.div1{ 
+    position: absolute; 
+    right: 3rem ; 
+    top: 13rem; 
+    color: black; 
+    
+} 
+.div1>h1,p{ 
+    margin-bottom: 15px;
+} 
+.div2{ 
+    position: absolute ;
+     bottom: 0; 
+     right: 15px; 
+     background-image: linear-gradient(to bottom, #FFA500, #000000);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+} 
+.div3{ 
+    position: absolute; 
+    bottom: 0; 
+    left: 20px;
+}
+@media screen and (max-width:500px){ 
+
+    .featured_categories{ 
+        display: grid; 
+        grid-template-columns: 1fr; 
+        
+    }
 }
